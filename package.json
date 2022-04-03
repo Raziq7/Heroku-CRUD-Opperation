@@ -30,6 +30,6 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.17.5"
+    "nodemon": "^2.0.15"
   }
 }
