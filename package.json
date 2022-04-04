@@ -27,7 +27,8 @@
     "esm": "^3.2.25",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.5.0",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
