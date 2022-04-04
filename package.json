@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "MERN Stack with ES6 and Typescript Boilerplate",
   "main": "server.js",
- "type": "module",
- "engines": {
-   "node": "16.14.2"
- },
+  "type": "module",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node -r esm server.js",
@@ -23,11 +23,11 @@
     "concurrently": "^3.6.0",
     "config": "^3.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.0",
     "esm": "^3.2.25",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.5.0",
-    "mongoose": "^5.1.6"
+    "mongoose": "^6.2.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
