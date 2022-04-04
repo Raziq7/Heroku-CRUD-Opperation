@@ -4,6 +4,9 @@
   "description": "MERN Stack with ES6 and Typescript Boilerplate",
   "main": "server.js",
  "type": "module",
+ "engines": {
+   "node": "16.14.2"
+ },
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node -r esm server.js",
