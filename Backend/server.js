@@ -1,5 +1,5 @@
-import app from './app';
-import config from './config';
+import app from './app.js';
+import config from './config/index.js';
 
 const { PORT } = config;
 
@@ -10,4 +10,4 @@ app.listen(PORT || 5000, function () {
     app.settings.env
   );
 });
-// app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
+// app.listen(process.env.PORT, () => console.log('Server started on PORT'));

@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import bcrypt from 'bcryptjs';
-import config from '../../config';
+import config from '../../config/index.js';
 import jwt from 'jsonwebtoken';
-import auth from '../../middleware/auth';
+import auth from '../../middleware/auth.js';
 // User Model
-import User from '../../models/User';
+import User from '../../models/User.js';
 
 const { JWT_SECRET } = config;
 const router = Router();
@@ -39,8 +39,8 @@ router.post('/login', async (req, res) => {
       user: {
         id: user._id,
         name: user.name,
-        email: user.email
-      }
+        email: user.email,
+      },
     });
   } catch (e) {
     res.status(400).json({ msg: e.message });
@@ -74,14 +74,14 @@ router.post('/register', async (req, res) => {
     const newUser = new User({
       name,
       email,
-      password: hash
+      password: hash,
     });
 
     const savedUser = await newUser.save();
     if (!savedUser) throw Error('Something went wrong saving the user');
 
     const token = jwt.sign({ id: savedUser._id }, JWT_SECRET, {
-      expiresIn: 3600
+      expiresIn: 3600,
     });
 
     res.status(200).json({
@@ -89,8 +89,8 @@ router.post('/register', async (req, res) => {
       user: {
         id: savedUser.id,
         name: savedUser.name,
-        email: savedUser.email
-      }
+        email: savedUser.email,
+      },
     });
   } catch (e) {
     res.status(400).json({ error: e.message });

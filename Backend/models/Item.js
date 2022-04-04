@@ -1,17 +1,17 @@
-import { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
 
 // Create Schema
-const ItemSchema = new Schema({
+const ItemSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   date: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
-const Item = model('item', ItemSchema);
+const Item = mongoose.model('item', ItemSchema);
 
 export default Item;
