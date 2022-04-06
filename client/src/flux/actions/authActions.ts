@@ -15,7 +15,7 @@ import { IAuthFunction, IConfigHeaders } from '../../types/interfaces';
 // Check token & load user
 export const loadUser = () => (dispatch: Function, getState: Function) => {
   // User loading
-  dispatch({ type: USER_LOADING });
+  dispatch({ type: USER_LOADING }); 
 
   axios
     .get('/api/auth/user', tokenConfig(getState))
