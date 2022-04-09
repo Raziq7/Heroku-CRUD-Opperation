@@ -49,7 +49,7 @@ const ItemModal = ({ isAuthenticated, addItem }: IItemModal) => {
       )}
 
       <Modal isOpen={modal} toggle={handleToggle}>
-        <ModalHeader toggle={handleToggle}>Add To Shopping List</ModalHeader>
+        <ModalHeader toggle={handleToggle}>Addd To Shopping List</ModalHeader>
         <ModalBody>
           <Form onSubmit={handleOnSubmit}>
             <FormGroup>
